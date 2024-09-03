@@ -125,9 +125,8 @@ def get_dealer_details(request, dealer_id):
 # Create a `add_review` view to submit a review
 # def add_review(request):
 
-
 def add_review(request):
-    if not(request.user.is_anonymous):
+    if not (request.user.is_anonymous):
         data = json.loads(request.body)
         try:
             post_review(data)
@@ -144,7 +143,6 @@ def add_review(request):
             "status": 403,
             "message": "Unauthorized"
             })
-
 
 def get_cars():
     count = CarMake.objects.filter().count()
