@@ -1,3 +1,5 @@
+/*jshint esversion: 8 */
+
 var express = require('express');
 var mongoose = require('mongoose');
 var fs = require('fs');
@@ -93,7 +95,7 @@ app.get('/fetchDealer/:id', async (req, res) => {
 app.post('/insert_review', express.raw({ type: '*/*' }), async (req, res) => {
     data = JSON.parse(req.body);
     var documents = await Reviews.find().sort({ id: -1 })
-    let new_id = documents[0]['id'] + 1
+    var new_id = documents[0].id + 1
 
     var review = new Reviews({
         "id": new_id,

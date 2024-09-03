@@ -1,3 +1,4 @@
+/*jshint esversion: 8 */
 var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
