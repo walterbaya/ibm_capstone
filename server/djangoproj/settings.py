@@ -13,14 +13,20 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "localhost",
-    os.getenv("allowed_host1"),
-    os.getenv("allowed_host2"),
-    os.getenv("allowed_host3")
+    "https://walterbaya19-8000.theiadockernext" +
+    "-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai",
+    "https://walterbaya19-8000.theianext-1-labs-prod-misc-" +
+    "tools-us-east-0.proxy.cognitiveclass.ai",
+    "https://sentianalyzer.1ld4fm6f9sfr.us-south.codeengine" +
+    ".appdomain.cloud"
 ]
 CSRF_TRUSTED_ORIGINS = [
-    os.getenv("trusted_origin1"),
-    os.getenv("trusted_origin2"),
-    os.getenv("trusted_origin3")
+    "https://walterbaya19-8000.theiadockernext" +
+    "-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai",
+    "https://walterbaya19-8000.theianext-1-labs-prod-misc-" +
+    "tools-us-east-0.proxy.cognitiveclass.ai",
+    "https://sentianalyzer.1ld4fm6f9sfr.us-south.codeengine" +
+    ".appdomain.cloud"
 ]
 
 REST_FRAMEWORK = {
@@ -85,18 +91,24 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": os.getenv("attribute_similarity_validator"),
+        "NAME": "django.contrib.auth." +
+        "password_validation.UserAttributeSimilarityValidator",
     },
     {
-        "NAME": os.getenv("minimum_length_validator"),
+        "NAME": "django.contrib.auth." +
+        "password_validation.MinimumLengthValidator",
     },
     {
-        "NAME": os.getenv("common_password_validator"),
+        "NAME": "django.contrib.auth." +
+        "password_validation.CommonPasswordValidator",
     },
     {
-        "NAME": os.getenv("numeric_password_validator"),
+        "NAME": "django.contrib.auth." +
+        "password_validation.NumericPasswordValidator",
     },
 ]
+
+
 
 
 # Internationalization
