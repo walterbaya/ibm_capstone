@@ -6,23 +6,21 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "django-insecure-ccow$tz_=9%dxu4(0%^(z%nx32#s@(zt9$ih@)5l54yny)wm-0"
+SECRET_KEY =     os.getenv("secret_key")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = [
     "localhost",
-    "https://walterbaya19-8000.theiadockernext-1"
-    + "-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai",
-    "https://walterbaya19-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai",
-    "https://sentianalyzer.1ld4fm6f9sfr.us-south.codeengine.appdomain.cloud",
+    os.getenv("allowed_host1"),
+    os.getenv("allowed_host2"),
+    os.getenv("allowed_host3")
 ]
 CSRF_TRUSTED_ORIGINS = [
-    "https://walterbaya19-8000.theiadockernext-1"
-    + "-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai",
-    "https://walterbaya19-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai",
-    "https://sentianalyzer.1ld4fm6f9sfr.us-south.codeengine.appdomain.cloud",
+    os.getenv("trusted_origin1"),
+    os.getenv("trusted_origin2"),
+    os.getenv("trusted_origin3")
 ]
 
 REST_FRAMEWORK = {
