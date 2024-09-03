@@ -144,7 +144,6 @@ def add_review(request):
             "message": "Unauthorized"
             })
 
-#get cars
 
 def get_cars():
     count = CarMake.objects.filter().count()
