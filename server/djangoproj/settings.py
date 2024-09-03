@@ -1,3 +1,6 @@
+"""
+Settings for djangoproj project.
+"""
 import os
 from pathlib import Path
 
@@ -10,12 +13,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "localhost",
-    "https://walterbaya19-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai",
+    "https://walterbaya19-8000.theiadockernext-1"
+    + "-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai",
     "https://walterbaya19-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai",
     "https://sentianalyzer.1ld4fm6f9sfr.us-south.codeengine.appdomain.cloud",
 ]
 CSRF_TRUSTED_ORIGINS = [
-    "https://walterbaya19-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai",
+    "https://walterbaya19-8000.theiadockernext-1"
+    + "-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai",
     "https://walterbaya19-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai",
     "https://sentianalyzer.1ld4fm6f9sfr.us-south.codeengine.appdomain.cloud",
 ]
