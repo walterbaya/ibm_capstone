@@ -13,16 +13,16 @@ SECRET_KEY = SECRET_KEY_A + SECRET_KEY_B
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-HOST_1_A = "https://walterbaya19-8000.theiadockernext" 
+HOST_1_A = "https://walterbaya19-8000.theiadockernext"
 HOST_1_B = "-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai"
-HOST_1 = HOST_1_A + HOST_1_B 
+HOST_1 = HOST_1_A + HOST_1_B
 
 HOST_2_A = "https://walterbaya19-8000.theianext-1-labs-prod-misc-"
 HOST_2_B = "tools-us-east-0.proxy.cognitiveclass.ai"
 HOST_2 = HOST_2_A + HOST_2_B
 
 HOST_3_A = "https://sentianalyzer.1ld4fm6f9sfr.us-south.codeengine"
-HOST_3_B =  ".appdomain.cloud"
+HOST_3_B = ".appdomain.cloud"
 HOST_3 = HOST_3_A + HOST_3_B
 
 ALLOWED_HOSTS = [
@@ -115,8 +115,6 @@ AUTH_PASSWORD_VALIDATORS = [
         "password_validation.NumericPasswordValidator",
     },
 ]
-
-
 
 
 # Internationalization
