@@ -13,7 +13,7 @@ urlpatterns = [
     path("about/", TemplateView.as_view(template_name="About.html")),
     path("dealers/", TemplateView.as_view(template_name="index.html")),
     path("dealer/<int:dealer_id>", 
-         TemplateView.as_view(template_name="index.html")),
+        TemplateView.as_view(template_name="index.html")),
     path("djangoapp/", include("djangoapp.urls")),
     path(
         "postreview/<int:dealer_id>",
